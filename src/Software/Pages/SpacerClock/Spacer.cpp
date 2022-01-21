@@ -45,9 +45,9 @@ void SpacerClock(lv_obj_t *screen)
     lv_obj_set_size(Clock, LV_PCT(100), LV_PCT(100));
     lv_obj_set_style_border_width(Clock, -12, 0);
 
-    extern const uint8_t gif_spacer_map[];
-    lv_obj_t *spacer = lv_gif_create_from_data(Clock, gif_spacer_map);
-    lv_obj_align(spacer, LV_ALIGN_CENTER, 0, 18);
+    //extern const uint8_t gif_spacer_map[];
+    //lv_obj_t *spacer = lv_gif_create_from_data(Clock, gif_spacer_map);
+    //lv_obj_align(spacer, LV_ALIGN_CENTER, 0, 18);
 
     power = lv_label_create(Clock);
     lv_obj_add_style(power, &IconBgStyle, 0);
@@ -99,9 +99,9 @@ void SpacerClock(lv_obj_t *screen)
     lv_obj_align(second, LV_ALIGN_CENTER, 80, -25);
     lv_label_set_text(second, "00");
 
-    LV_IMG_DECLARE(img_foot_white);
+    LV_IMG_DECLARE(img_foot_black);
     lv_obj_t *footlogo = lv_img_create(Clock);
-    lv_img_set_src(footlogo, &img_foot_white);
+    lv_img_set_src(footlogo, &img_foot_black);
     lv_obj_set_style_img_recolor_opa(footlogo, LV_OPA_100, 0);
     lv_obj_set_style_img_recolor(footlogo, lv_color_black(), 0);
     lv_obj_align(footlogo, LV_ALIGN_CENTER, 40, 35);
