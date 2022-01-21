@@ -20,8 +20,8 @@ void XYWatchApp::AppInit()
     /*XYWatch::Botton_BindEvent(BTN_3, 0, APP_Frame); */
     lv_theme_default_init(NULL, lv_palette_main(LV_PALETTE_BLUE), lv_palette_main(LV_PALETTE_RED), LV_THEME_DEFAULT_DARK, &lv_font_montserrat_12);
     DialStyleInit();
-    LogoSetup();
-    //Dial_Frame();
+    //LogoSetup();
+    Dial_Frame();
 }
 
 void XYWatchApp::Dial_Frame()
@@ -39,14 +39,14 @@ void XYWatchApp::Dial_Frame()
     //lv_obj_t *digitalclock_t = lv_tileview_add_tile(Dial_Screen, 1, 0, LV_DIR_ALL);
     lv_obj_t *spacerclock_t = lv_tileview_add_tile(Dial_Screen, 0, 0, LV_DIR_ALL);
     lv_obj_t *compass_t = lv_tileview_add_tile(Dial_Screen, 1, 0, LV_DIR_ALL);
-    lv_obj_t *console_t = lv_tileview_add_tile(Dial_Screen, 0, 1, LV_DIR_ALL);
+    //lv_obj_t *console_t = lv_tileview_add_tile(Dial_Screen, 0, 1, LV_DIR_ALL);
     lv_obj_t *setting_t = lv_tileview_add_tile(Dial_Screen, 2, 0, LV_DIR_ALL);
 
     //SimpleClock(pointerclock_t);
     //DigitalClock(digitalclock_t);
     SpacerClock(spacerclock_t);
     CompassScreen(compass_t);
-    Console(console_t);
+    //Console(console_t);
     TotalSetting(setting_t);
 
     lv_scr_load_anim(Dial_Screen, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, true);
